@@ -5,9 +5,9 @@ public:
         stack<char> string;
         // Determine the size
         int size = s.length();
-        // If it is odd, return false
-        if (size % 2 != 0)
-            return false;
+        // // If it is odd, return false
+        // if (size % 2 != 0)
+        //     return false;
         // Have two integers, for opening and clsoing, if they don't match
         // return flase
         int j = 0;
