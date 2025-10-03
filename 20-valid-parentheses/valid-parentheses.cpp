@@ -5,13 +5,8 @@ public:
         stack<char> string;
         // Determine the size
         int size = s.length();
-        // // If it is odd, return false
-        // if (size % 2 != 0)
-        //     return false;
-        // Have two integers, for opening and clsoing, if they don't match
-        // return flase
-        int j = 0;
-        int k = 0;
+        // Have two integers, for opening and clsoing, if they don't match return flase
+        int j = 0 ; int k = 0;
         // Go in a for loop and put every char into the stack
         for (int i = 0; i < size; i++) {
             if (s[i] == '(' || s[i] == '{' || s[i] == '[') {
