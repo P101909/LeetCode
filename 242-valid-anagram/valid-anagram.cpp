@@ -5,8 +5,7 @@ public:
         sort(t.begin(), t.end());
         //Sort both strings
         int length = s.length();
-        int length1 = t.length();
-        if (length != length1)//Strings are not equal in size 
+        if (length != t.length())//Strings are not equal in size 
             return false;
         for (int i = 0; i < length; i++) {
             if (s[i] != t[i])
