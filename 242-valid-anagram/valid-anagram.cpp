@@ -1,13 +1,13 @@
 class Solution {
 public:
     bool isAnagram(string s, string t) {
-        //if they are not the same size, just return false
-        if (s.length() != t.length())
-            return false;
         sort(s.begin(), s.end());
         sort(t.begin(), t.end());
-        int s1 = s.length();
-        for (int i = 0; i<s1; i++) {
+        int length = s.length();
+        int length1 = t.length();
+        if (length1 != length)
+            return false;
+        for (int i = 0; i < length; i++) {
             if (s[i] != t[i])
                 return false;
         }
