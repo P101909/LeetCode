@@ -13,12 +13,15 @@
 class Solution {
 public:
     TreeNode* invertTree(TreeNode* root) {
+        //Base case
         if (root == nullptr)
             return root;
+        //Do the swapping
         TreeNode* temp = nullptr;
         temp = root->left;
         root->left = root->right;
         root->right = temp;
+        // Recursive Case
         invertTree(root->left);
         invertTree(root->right);
         return root;
