@@ -6,7 +6,7 @@ public:
         int j = size - 1; // For the max index
         int k = 0;        // For the mid index
         while (i <= j) {
-            k = floor((i + j) / 2);
+            k = (i + j) / 2;
             if (nums[k] == target)
                 return k;
             if (target > nums[k])
