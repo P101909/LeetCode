@@ -5,7 +5,6 @@ public:
         int i = 0;        // For the min index
         int j = size - 1; // For the max index
         int k = 0;        // For the mid index
-        int index = 0;    // For the index if we have the target;
         while (i <= j) {
             k = floor((i + j) / 2);
             if (nums[k] == target)
