@@ -22,7 +22,8 @@ public:
         if (image[i][j] != OgColor)
             return;
 
-        // Recursive Case
+        // Recursive Case:
+        
         // Depth First Search
         // Color the pixel if matches the og pixel color
         image[i][j] = color;
@@ -37,6 +38,3 @@ public:
             ContinueColoring(image, m, n, i, (j + 1), color, OgColor);
     };
 };
-
-// Step 1: Change the color of the starting pixel
-// image[sr][sc] = color;
