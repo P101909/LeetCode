@@ -5,7 +5,15 @@ public:
     stack<int> s2;
 
     MyQueue() {
-        
+        // Basically Juggle between the two stacks
+        // At any time, one of the stacks will be empty and the other will be our main stack
+        // which acts as the queue
+
+        // If a new element is pushed to the queue, pop everything from the non empty stack and puah them
+        // into the empty stack
+        // Then push the new element to the empty stack
+        // pop everything from the other stack and push them into the stack with the new element
+
     }
     
     void push(int x) {
@@ -50,7 +58,6 @@ public:
             s2.pop();
         }
         else {
-            cout << "Thisshould have been called";
             temp = s1.top();
             s1.pop();
         }
@@ -67,10 +74,6 @@ public:
     }
     
     bool empty() {
-    if (s1.empty())
-        cout<<"s1 is empty"<<endl;
-    if (s2.empty())
-        cout<<"s2 is empty"<<endl;
       return (s1.empty() && s2.empty());  
     }
 };
