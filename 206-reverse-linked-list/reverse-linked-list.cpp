@@ -12,21 +12,18 @@ class Solution {
 public:
     ListNode* reverseList(ListNode* head) {
 
-        ListNode* prev = nullptr;
-        ListNode* cur = nullptr;
         ListNode* next = nullptr;
 
         // Base Cases
         if (head == nullptr)
             return head;
-        if (head -> next == nullptr)
+        if (head->next == nullptr)
             return head;
 
         // Recursive case
-        cur = reverseList(head -> next);
-        (head -> next) -> next = head;
-        head -> next = prev;
-        return cur;
-        
+        next = reverseList(head->next);
+        (head -> next)->next = head; // Reverse the link
+        head->next = nullptr;      // Break the link
+        return next;
     }
 };
