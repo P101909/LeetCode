@@ -21,11 +21,11 @@ public:
                     sum++;
                     centralbit = true;
                 }
-                else if (letters[s[j]] > 1 && centralbit == false) {
+                else if (centralbit == false) {
                     sum += letters[s[j]];
                     centralbit = true;
                 }
-                else if (letters[s[j]] > 1 && centralbit == true)
+                else if (centralbit == true)
                     sum = sum + letters[s[j]] - 1; // We already accounted for the central bit
             }
             letters[s[j]] = 0; // To avoid overcounting
